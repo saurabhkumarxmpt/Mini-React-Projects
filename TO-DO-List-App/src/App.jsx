@@ -1,42 +1,30 @@
-import { useState } from 'react'
+import React,{useState} from 'react'
 
-function App() {
-  const [input, setinput] = useState('');
-  const [array,setarray]=useState([]);
-
-    function handleinput(e){
-      setinput(e.target.value)
-    }
-    function handlebutton(){
-      if(input.trim() !== ''){
-        setarray([...array,input]);
-        setinput('')
-      }
-    }
-  return (
-    <>
-    <input 
-    type="text"
-    placeholder='enter something'
-    value={input}
-    className='outline-0 border p-2 my-10 mx-7 rounded-lg'
-    onChange={handleinput}
-    />
-    <button 
-    onClick={() =>  handlebutton()}
-    className='py-2 px-4 bg-green-400 text-white rounded-md'
-    >click here</button>
-    {/* {btn ? <p>{input}</p> : "something wronfg"} */}
-    <ul className='mt-0 ml-14'>
-        {array.map((array, index) => (
-          <li 
-          key={index}
-          className='border max-w-60 mt-5 p-2'
-          >{index+1}.  {array}</li>
-        ))}
-      </ul>
-    </>
+const App= ()=>{
+  const [InputValue,setInputValue]=useState('');
+  const [InputItem,setInputItem]=useState([]);
+  
+  return(
+    <div className='flex justify-center'>
+      <div>
+      <h1 className=' my-10 text-4xl font-semibold text-blue-500'>TO-DO-App</h1>
+      <div>
+        <input 
+        type="text"
+        value={InputValue}
+        className='outline-0 border border-slate-600 py-2 px-4 w-[370px] rounded -ml-[100px] mr-2'
+        placeholder='Enter Tasks...'
+        onChange={(e)=> setInputValue(e.target.value)}
+        />
+        <button
+        className='py-2 px-4 bg-green-500 rounded-md text-white' 
+        >Add Task</button>
+        </div>
+        <p>{InputValue}</p>
+        </div>
+    </div>
   )
+
 }
 
 export default App
