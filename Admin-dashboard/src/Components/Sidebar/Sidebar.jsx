@@ -13,6 +13,8 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import BarChartIcon from '@mui/icons-material/BarChart';
+import SettingsIcon from '@mui/icons-material/Settings';
+import '../styles/sidebar.css'
 const Sidebar=()=>{
     const [selectedIndex, setSelectedIndex] = React.useState(0);
     const [open, setOpen] = React.useState(true);
@@ -30,9 +32,9 @@ const Sidebar=()=>{
                 className="text-3xl py-6 px-12"
                 >Portal</h2>
             </div>
-            <div>
+            <div className='h-[60%] overflow-scroll custom-scrollbar'>
             <Box 
-            sx={{ width: '100%', maxWidth: 320, marginTop:3, fontSize:'small'}}
+            sx={{ width: '100%', maxWidth: 320, fontSize:'small'}}
             >
       <List component="nav" aria-label="main mailbox folders">
         <ListItemButton
@@ -95,10 +97,21 @@ const Sidebar=()=>{
           </ListItemIcon>
           <ListItemText primary="Charts" />
         </ListItemButton>
-        
-      
       </List>
     </Box>
+            </div>
+            <div className="border-top h-auto mt-[45%] px-1">
+            <Divider />
+            <ListItemButton
+          selected={selectedIndex === 4}
+          onClick={(event) => handleListItemClick(event, 4)}
+        >
+            
+          <ListItemIcon>
+            <SettingsIcon />
+          </ListItemIcon>
+          <ListItemText primary="Setting" />
+        </ListItemButton>
             </div>
         </div>
     )
