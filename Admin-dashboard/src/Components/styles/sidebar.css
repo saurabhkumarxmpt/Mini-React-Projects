@@ -17,3 +17,34 @@
     background-color: #555; /* Scrollbar color when hovered */
   }
   
+  .main-container{
+    height: auto;
+    width:115%;
+    /* background-color: rgb(12, 15, 189); */
+    display: flex;
+    gap:70px;
+    padding: 1px ;
+    /* justify-content: ; */
+    margin-top: 25px;
+  }
+
+  .main-container > div{
+    height: 140px;
+    width: 210px;
+    /* background-color: red; */
+    border-radius: 6px;
+    text-align: center;
+    padding-top: 25px;
+    background-color: white;
+    box-shadow: 0px 1px 5px rgb(168, 168, 168);
+  }
+
+  .chart{
+    display: flex;
+    /* background-color: red; */
+  }
+
+  .chart >div{
+    background-color: white;
+    border-radius: 6px;
+  }
