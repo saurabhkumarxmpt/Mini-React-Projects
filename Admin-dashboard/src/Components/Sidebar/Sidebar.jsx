@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { NavLink } from "react-router-dom";
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -26,7 +27,7 @@ const Sidebar=()=>{
         setOpen(!open);
       }
     return(
-        <div className="h-screen w-[240px] sticky border">
+        <div className="h-screen w-[240px] fixed border">
             <div>
                 <h2
                 className="text-3xl py-6 px-12"
@@ -37,7 +38,8 @@ const Sidebar=()=>{
             sx={{ width: '100%', maxWidth: 320, fontSize:'small'}}
             >
       <List component="nav" aria-label="main mailbox folders">
-        <ListItemButton
+        <NavLink to="/">
+        <ListItemButton 
           selected={selectedIndex === 0}
           onClick={(event) => handleListItemClick(event, 0)
           }
@@ -47,6 +49,8 @@ const Sidebar=()=>{
           </ListItemIcon>
           <ListItemText primary="Home" />
         </ListItemButton>
+        </NavLink>
+        <NavLink to="/docs">
         <ListItemButton
           selected={selectedIndex === 1}
           onClick={(event) => handleListItemClick(event, 1)}
@@ -56,6 +60,8 @@ const Sidebar=()=>{
           </ListItemIcon>
           <ListItemText primary="Docs" />
         </ListItemButton>
+        </NavLink>
+        <NavLink to='/orders'>
         <ListItemButton
           selected={selectedIndex === 2}
           onClick={(event) => handleListItemClick(event, 2)}
@@ -65,6 +71,7 @@ const Sidebar=()=>{
           </ListItemIcon>
           <ListItemText primary="Orders" />
         </ListItemButton>
+        </NavLink>
         <Divider />
         <ListItemButton 
         onClick={handleClick}
