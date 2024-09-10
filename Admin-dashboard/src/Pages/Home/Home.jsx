@@ -15,6 +15,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Lasttab from './MoreTab';
 export default function CardOne() {
   const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
 const pData = [2400, 1398, 9800, 3908, 4800, 3800, 4300];
@@ -173,6 +174,12 @@ const rows = [
       </Table>
     </TableContainer>
         </div>
+        </div>
+        <div className='container'>
+          <Lasttab title='Invoices' contant='Lorem Ipsum is simply dummy text of the printing and typesetting industry'/>
+          <Lasttab title='Bill' contant='Lorem Ipsum is simply dummy text of the printing and typesetting industry'/>
+          <Lasttab title='Create' contant='Lorem Ipsum is simply dummy text of the printing and typesetting industry'/>
+       
         </div>
     </div>
   )
