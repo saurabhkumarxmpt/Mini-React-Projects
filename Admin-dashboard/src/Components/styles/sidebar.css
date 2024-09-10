@@ -42,9 +42,13 @@
   .chart{
     display: flex;
     /* background-color: red; */
+    flex-wrap: wrap;
   }
 
   .chart >div{
     background-color: white;
     border-radius: 6px;
+    height: 365px;
+    width: 500px;
+    box-shadow: 0px 1px 5px rgb(168, 168, 168);
   }
