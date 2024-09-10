@@ -27,7 +27,7 @@ const Sidebar=()=>{
         setOpen(!open);
       }
     return(
-        <div className="h-screen w-[240px] fixed border">
+        <div className="h-screen w-[240px] fixed border bg-white z-20">
             <div>
                 <h2
                 className="text-3xl py-6 px-12"

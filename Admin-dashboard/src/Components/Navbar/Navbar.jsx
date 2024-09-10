@@ -15,7 +15,7 @@ const Navbar=()=>{
       setAnchorEl(null);
     };
     return(
-        <div className="h-[60px] w-[82%] shadow-md flex items-center px-10 justify-between fixed ml-[18%] z-10 bg-white">
+        <div className="h-[60px] w-[83%] shadow-md flex items-center px-10 justify-between fixed ml-[17%] z-10 bg-white">
            <div>
             <input 
             type="search" 

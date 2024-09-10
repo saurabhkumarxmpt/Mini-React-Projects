@@ -9,7 +9,7 @@ const App=()=>{
     <div className='flex w-[100%] '>
     <Sidebar />
     <Navbar />
-    <div className=' flex h-auto w-[82%] ml-[18%] bg-red-200 mt-[60px] justify-center items-center'>
+    <div className=' flex h-auto w-[83%] ml-[17%] bg-slate-100 mt-[60px]   overflow-hidden px-[40px] py-[30px]'>
     <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/orders" element={<Orders />} />
