@@ -1,0 +1,107 @@
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Divider from '@mui/material/Divider';
+import HomeIcon from '@mui/icons-material/Home';
+import FolderIcon from '@mui/icons-material/Folder';
+import Collapse from '@mui/material/Collapse';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import ListAltIcon from '@mui/icons-material/ListAlt';
+import BarChartIcon from '@mui/icons-material/BarChart';
+const Sidebar=()=>{
+    const [selectedIndex, setSelectedIndex] = React.useState(0);
+    const [open, setOpen] = React.useState(true);
+    const handleListItemClick = (event, index) => {
+        setSelectedIndex(index);
+      };
+
+      const handleClick = () => {
+        setOpen(!open);
+      }
+    return(
+        <div className="h-screen w-[240px] sticky border">
+            <div>
+                <h2
+                className="text-3xl py-6 px-12"
+                >Portal</h2>
+            </div>
+            <div>
+            <Box 
+            sx={{ width: '100%', maxWidth: 320, marginTop:3, fontSize:'small'}}
+            >
+      <List component="nav" aria-label="main mailbox folders">
+        <ListItemButton
+          selected={selectedIndex === 0}
+          onClick={(event) => handleListItemClick(event, 0)
+          }
+        >
+          <ListItemIcon>
+            <HomeIcon />
+          </ListItemIcon>
+          <ListItemText primary="Home" />
+        </ListItemButton>
+        <ListItemButton
+          selected={selectedIndex === 1}
+          onClick={(event) => handleListItemClick(event, 1)}
+        >
+          <ListItemIcon>
+            <FolderIcon />
+          </ListItemIcon>
+          <ListItemText primary="Docs" />
+        </ListItemButton>
+        <ListItemButton
+          selected={selectedIndex === 2}
+          onClick={(event) => handleListItemClick(event, 2)}
+        >
+          <ListItemIcon>
+            <ListAltIcon />
+          </ListItemIcon>
+          <ListItemText primary="Orders" />
+        </ListItemButton>
+        <Divider />
+        <ListItemButton 
+        onClick={handleClick}
+        >
+        <ListItemIcon>
+          <ContentCopyIcon />
+        </ListItemIcon>
+        <ListItemText primary="Pages" />
+        {open ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={!open} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4,}}>
+            <ListItemText primary=" | Notifications" />
+          </ListItemButton>
+        </List>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText primary=" | Account" />
+          </ListItemButton>
+        </List>
+      </Collapse>
+      <Divider />
+      <ListItemButton
+          selected={selectedIndex === 3}
+          onClick={(event) => handleListItemClick(event, 3)}
+        >
+          <ListItemIcon>
+            <BarChartIcon />
+          </ListItemIcon>
+          <ListItemText primary="Charts" />
+        </ListItemButton>
+        
+      
+      </List>
+    </Box>
+            </div>
+        </div>
+    )
+}
+
+export default Sidebar
