@@ -1,10 +1,8 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import Card from './DocsComonent'
+import Pagination from '@mui/material/Pagination';
 const Docs=()=>{
     return(
         <div>
@@ -35,9 +33,27 @@ const Docs=()=>{
             </div>
             </div>
            </div>
-           <div className='flex w-[1060px] flex-wrap'>
-            <div>h1</div>
-           </div>
+           <div className='flex w-full flex-wrap mt-[90px] gap-12 justify-center'>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Card  title='Doc for a form' size='340KB' uploadDate='3 day ago'/>
+            <Pagination count={10} variant="outlined" />
+           </div>   
         </div>
     )
 }
