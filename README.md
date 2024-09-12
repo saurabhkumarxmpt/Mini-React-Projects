@@ -6,4 +6,18 @@ In this GitHub repository, you'll find several mini React projects that I create
 
 ## Projects
 
-[Admin poral](Admin-dashboard)
+- [01. Admin Deshbord](Admin-dashboard)
+- [02. Random Joke Generator](Random-Joke-Generator)
+- [03. Simple Color Picker](Simple-color-picker)
+- [04. TO-DO App](TO-DO-List-App)
+
+
+## Installation
+
+Clone any folder from this repository and run the following commands.
+
+```bash
+  npm install
+  npm run dev
+```
+    
