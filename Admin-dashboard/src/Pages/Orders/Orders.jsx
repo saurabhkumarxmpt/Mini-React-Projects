@@ -34,7 +34,7 @@ const Orders=()=>{
             </div>
             </div>
            </div>
-            <div className='flex w-[1060px] bg-white justify-around text-center my-[40px]  font-semibold orderbox'>
+            <div className='flex w-[1060px] bg-white justify-around text-center my-[40px]  font-semibold orderbox rounded shadow'>
                     <div>All</div>
                     <div>Paid</div>
                     <div>Pending</div>
