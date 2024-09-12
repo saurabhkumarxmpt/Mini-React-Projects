@@ -49,7 +49,7 @@ export const Data=[
         product:'laptop',
         customer:'jhon edem',
         date:['17 Oct','2:16'],
-        Status:'Panding',
+        Status:'Pending',
         Total:'$56.89'
 
     },
