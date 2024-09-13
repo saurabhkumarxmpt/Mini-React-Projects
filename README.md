@@ -10,6 +10,7 @@ In this GitHub repository, you'll find several mini React projects that I create
 - [02. Random Joke Generator](Random-Joke-Generator)
 - [03. Simple Color Picker](Simple-color-picker)
 - [04. TO-DO App](TO-DO-List-App)
+- [05. Quiz-application](Quiz-application)
 
 
 ## Installation
