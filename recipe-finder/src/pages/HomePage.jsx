@@ -34,9 +34,9 @@ const SearchPage=()=>{
                     className="w-[400px] h-[40px] border outline-none pl-4 rounded-md"
                      />
                 </div>
-            <div className="bg-red-200 py-3 max-w-60">
+            <div className="bg-green-200 text-center">
                 <h1 className="font-semibold text-2xl">Meals</h1>
-                <div>
+                <div className="bg-red-200 text-center max-w-60 max-h-[360px] px-[300px] mt-10 overflow-hidden overflow-y-auto">
                 {loading && <p>Loading...</p>}
                 {!loading && data && (
         <ul>
