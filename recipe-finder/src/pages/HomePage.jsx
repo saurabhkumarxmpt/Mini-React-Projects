@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 const SearchPage = () => {
   const [inputValue, setInputValue] = useState("");
   const [loading, setLoading] = useState(true);
@@ -7,7 +7,7 @@ const SearchPage = () => {
 
   useEffect(() => {
     if (inputValue !== "") {
-      setLoading(true);  // Set loading true when fetching data
+      setLoading(true); 
       fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
         .then((response) => response.json())
         .then((data) => {
@@ -47,8 +47,10 @@ const SearchPage = () => {
           ) : data ? (
             <ul>
               {data.map((meal) => (
-                <li key={meal.idMeal} className="text-lg">
+                <li key={meal.idMeal} className="text-lg hover:bg-amber-400 cursor-pointer  ">
+                <Link to={`/recipe/${meal.idMeal}`}>
                   {meal.strMeal}
+                  </Link>
                 </li>
               ))}
             </ul>
