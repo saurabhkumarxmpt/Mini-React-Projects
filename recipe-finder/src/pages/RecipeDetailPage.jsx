@@ -25,13 +25,15 @@ const RecipeDetail=()=>{
                     <p className="text-center pt-20 text-2xl">Loading...</p>
                 ): recipe ?(
                     <div>
-                     <div className="flex py-20 px-[170px]">
+                     <div className="flex py-20 px-[170px] bg-slate-200 justify-center">
                         <div className="">
-                            <img src={recipe.strMealThumb} alt={recipe.strMeal} className="size-[350px] rounded-md"/>
+                            <img src={recipe.strMealThumb} alt={recipe.strMeal} className="size-[350px] rounded-xl shadow-lg"/>
                         </div>
-                        <div className="bg-green-200 pl-10 pr-20 rounded-xl w-auto py-7 ml-28 ">
-                            <h1 className="text-3xl py-5">{recipe.strMeal}</h1>
-                            <p>Catagory: <span>{recipe.strCategory}</span></p>
+                        <div className="bg-blue-300 pl-10 pr-20 rounded-xl w-auto py-7 ml-28 shadow-lg ">
+                            <h1 className="text-3xl pb-10">{recipe.strMeal}</h1>
+                            <p className="pb-2 text-lg"><span className="font-semibold">Catagory:</span> {recipe.strCategory}</p>
+                            <p className="text-lg pb-2"><span className="font-semibold">Nationality:</span> {recipe.strArea}</p>
+                            <a href={recipe.strYoutube}>Video Link: Youtube</a>
                         </div>
                      </div>
                     </div>  
