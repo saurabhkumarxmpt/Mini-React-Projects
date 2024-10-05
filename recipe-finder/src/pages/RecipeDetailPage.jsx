@@ -33,8 +33,11 @@ const RecipeDetail=()=>{
                             <h1 className="text-3xl pb-10">{recipe.strMeal}</h1>
                             <p className="pb-2 text-lg"><span className="font-semibold">Catagory:</span> {recipe.strCategory}</p>
                             <p className="text-lg pb-2"><span className="font-semibold">Nationality:</span> {recipe.strArea}</p>
-                            <a href={recipe.strYoutube}>Video Link: Youtube</a>
+                            <a href={recipe.strYoutube} className="text-lg pb-2 text-red-600"><span className="font-semibold text-black">Video Link:</span> Youtube</a>
                         </div>
+                     </div>
+                     <div className="bg-red-400">
+                            <h2>fdbh</h2>
                      </div>
                     </div>  
                 ):(
