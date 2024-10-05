@@ -36,8 +36,14 @@ const RecipeDetail=()=>{
                             <a href={recipe.strYoutube} className="text-lg pb-2 text-red-600"><span className="font-semibold text-black">Video Link:</span> Youtube</a>
                         </div>
                      </div>
-                     <div className="bg-red-400">
-                            <h2>fdbh</h2>
+                     <div className="bg-red-400 flex justify-around">
+                        <div>
+                            <h1>{recipe.strMeal} Ingredients
+                            </h1>
+                        </div>
+                        <div className="bg-green-500">
+                            2 sned
+                        </div>
                      </div>
                     </div>  
                 ):(
