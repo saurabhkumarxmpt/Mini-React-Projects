@@ -11,6 +11,7 @@ In this GitHub repository, you'll find several mini React projects that I create
 - [03. Simple Color Picker](Simple-color-picker)
 - [04. TO-DO App](TO-DO-List-App)
 - [05. Quiz-application](Quiz-application)
+- [06. Recipe-finder](https://github.com/saurabhkumarxmpt/Mini-React-Projects/tree/main/recipe-finder)
 
 
 ## Installation
