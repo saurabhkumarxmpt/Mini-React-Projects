@@ -11,7 +11,7 @@ const App=()=>{
       const response=await fetch(`http://api.weatherapi.com/v1/current.json?key=${Api_key}&q=${city}`);
 
       if (!response.ok){
-        throw new Error('check ker bhai kuch galat hai');
+        throw new error('check ker bhai kuch galat hai');
       }
       const result =await response.json();
       setdata(result);
@@ -33,13 +33,13 @@ const App=()=>{
       {loading && <p>Loading...</p>}
       {error && <p>Error {error}</p>}
 
-      {data && (
+      {data ? (
         <ul>
-        {data.map(post => (
-          <li key={post.id}>{post.title}</li>
-        ))}
+        {data.map(post => 
+          <li key={post.id}>{post.text}</li>
+        )}
       </ul>
-      )}
+      ): <p>kuch ker bhai galat hai kuch to</p>}
     </div>
   )
 }
