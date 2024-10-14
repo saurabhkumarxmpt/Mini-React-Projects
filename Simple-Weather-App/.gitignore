@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+Api_key
 dist
 dist-ssr
 *.local
