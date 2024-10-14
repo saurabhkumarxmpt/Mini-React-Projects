@@ -7,6 +7,7 @@ const App=()=>{
   const city="dhampur "
   const fatchData= async() => {
     setloading(true);
+    seterror(null)
     try{
       const response=await fetch(`http://api.weatherapi.com/v1/current.json?key=${Api_key}&q=${city}`);
 
@@ -17,7 +18,7 @@ const App=()=>{
       setdata(result);
       
     }catch(error){
-      seterror(error.massage)
+      seterror(error.message)
     }finally{
       setloading(false);
     }
@@ -33,13 +34,14 @@ const App=()=>{
       {loading && <p>Loading...</p>}
       {error && <p>Error {error}</p>}
 
-      {data ? (
-        <ul>
-        {data.map(post => 
-          <li key={post.id}>{post.text}</li>
-        )}
-      </ul>
-      ): <p>kuch ker bhai galat hai kuch to</p>}
+      {data && (
+       <div>
+        <h2>Weather in {data.location.name}</h2>
+          <p>Temperature: {data.current.temp_c}°C</p>
+          <p>Condition: {data.current.condition.text}</p>
+          <p>Humidity: {data.current.humidity}%</p>
+       </div>
+      )}
     </div>
   )
 }
