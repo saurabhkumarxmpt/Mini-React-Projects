@@ -3,7 +3,7 @@ const App=()=>{
   const[data,setdata]=useState(null);
   const[loading,setloading]=useState(true);
   const[error,seterror]=useState(null);
-  const Api_key="f9b0de0aaedf4e26b58151616241410";
+  const Api_key=process.env.REACT_APP_WEATHER_API_KEY;
   const city="dhampur "
   const fatchData= async() => {
     setloading(true);
