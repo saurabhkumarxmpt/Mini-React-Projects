@@ -5,8 +5,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
-  // Access the API key from the environment variable
-  const Api_key = process.env.REACT_APP_WEATHER_API_KEY;
+  const Api_key =process.env.REACT_APP_WEATHER_API_KEY;
   const city = 'Dhampur';
 
   const fetchData = async () => {
