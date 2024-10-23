@@ -31,7 +31,6 @@ const WeatherPage = () => {
   const handleCityChange = (e) => {
     setCity(e.target.value);
   };
-  console.log(API_KEY)
   return (
     <div>
       <h1>Weather App</h1>
