@@ -6,13 +6,14 @@ const WeatherPage = () => {
   const [city, setCity] = useState('London'); // default city
   const [error, setError] = useState(null);
 
-  const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
   useEffect(() => {
     const fetchWeather = async () => {
       try {
         const response = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric
+`
         );
         if (!response.ok) {
           throw new Error('City not found');
@@ -30,7 +31,7 @@ const WeatherPage = () => {
   const handleCityChange = (e) => {
     setCity(e.target.value);
   };
-
+  console.log(API_KEY)
   return (
     <div>
       <h1>Weather App</h1>
